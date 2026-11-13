@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>評分方法｜台北讀書咖啡誌</title>
+<meta name="description" content="從你所在的捷運站，找一間坐得住、讀得下書的咖啡廳。每一間都是作者親自去過的。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&amp;family=Noto+Sans+TC:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10h12v3.5a6 6 0 0 1-6 6h0a6 6 0 0 1-6-6V10zM16.5 11.5h1a2.5 2.5 0 0 1 0 5h-1.3M3 21h16"/><path d="M8.5 7c0-1.2 1-1.5 1-2.7M12 7c0-1.2 1-1.5 1-2.7"/></svg><span>台北讀書咖啡誌</span></a>
+    <nav class="nav" aria-label="主要導覽"><a href="../">首頁</a><a href="../stations/">捷運站</a><a href="../guides/">主題清單</a><a href="../rating/" aria-current="page">評分方法</a><a href="../how-it-works/">這個網站怎麼做的</a><a href="../about/">關於本站</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<nav class="crumbs" aria-label="麵包屑"><a href="../">首頁</a> › 評分方法</nav>
+<h1 class="page-title">評分方法</h1>
+<article class="prose">
+<h2>為什麼用公式打分</h2>
+<p>每個人對「好讀書」的感覺不一樣，同一個人不同天的心情也不一樣。為了讓每間店都用同一把尺衡量，星數<strong>不由人打</strong>：頁面只記錄客觀事實，再由網站的建置程式照公式計算。</p>
+<h2>看哪四件事</h2>
+<p>這四件事來自我挑讀書咖啡廳時最在意的條件：</p>
+<ul><li><strong>插座</strong>：大部分座位都有，還是要挑位置。</li><li><strong>Wi-Fi</strong>：穩不穩定。</li><li><strong>安靜程度</strong>：能不能專心看書。</li><li><strong>營業到晚上</strong>：平日晚上 9 點以後還能不能待。</li></ul>
+<h2>資訊不完整怎麼辦</h2>
+<p>我寧可低估，也不要讓你白跑一趟：</p>
+<ul><li>沒有確認的項目一律以 0 分計算，頁面會標示「含待確認項目」。</li><li>只記得「有插座」、不確定多不多，就算「部分」。</li><li>只是印象（例如「應該不限時」），就先標「未確認」。</li></ul>
+
+<h2>目前使用的公式</h2>
+<p class="section-sub">以下兩張表由建置程式直接從計分程式碼產生，跟實際計分保證一致。</p>
+<div class="table-scroll"><table class="data-table">
+  <thead><tr><th>項目</th><th>2 分</th><th>1 分</th><th>0 分</th></tr></thead>
+  <tbody><tr><th>插座（outlets）</th><td>多</td><td>部分</td><td>幾乎沒有／未確認</td></tr><tr><th>Wi-Fi（wifi）</th><td>—</td><td>穩定</td><td>不穩／無／未確認</td></tr><tr><th>安靜（quiet）</th><td>安靜</td><td>普通</td><td>吵／未確認</td></tr><tr><th>晚上（closes_weekday）</th><td>—</td><td>平日營業到 21:00（含）以後，跨夜也算</td><td>21:00 以前／未確認</td></tr></tbody>
+</table></div>
+<div class="table-scroll"><table class="data-table narrow">
+  <thead><tr><th>總分（滿分 6）</th><th>星數</th></tr></thead>
+  <tbody><tr><td>6</td><td><span class="stars" role="img" aria-label="讀書友善度 5 顆星（滿分 5 顆）"><span class="on">★★★★★</span><span class="off"></span></span></td></tr><tr><td>5</td><td><span class="stars" role="img" aria-label="讀書友善度 4 顆星（滿分 5 顆）"><span class="on">★★★★</span><span class="off">★</span></span></td></tr><tr><td>4</td><td><span class="stars" role="img" aria-label="讀書友善度 3 顆星（滿分 5 顆）"><span class="on">★★★</span><span class="off">★★</span></span></td></tr><tr><td>2～3</td><td><span class="stars" role="img" aria-label="讀書友善度 2 顆星（滿分 5 顆）"><span class="on">★★</span><span class="off">★★★</span></span></td></tr><tr><td>0～1</td><td><span class="stars" role="img" aria-label="讀書友善度 1 顆星（滿分 5 顆）"><span class="on">★</span><span class="off">★★★★</span></span></td></tr></tbody>
+</table></div>
+<ul>
+  <li>平日限時 90 分鐘以內：最多 2 顆星。</li>
+  <li>任何計分項目是「未確認」：以 0 分計算，頁面標示「含待確認項目」。</li>
+  <li>最後確認超過 90 天：頁面標示「資訊可能過時」。</li>
+</ul>
+
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>台北讀書咖啡誌｜所有資訊來自作者的親身造訪，出發前請以店家公告為準。</p>
+    <p>本網站由 AI 依照 <code>AGENTS.md</code> v1 的規則維護｜最後建置 2026-11-13｜<a href="https://github.com/cc-c12/taipei-study-cafe">GitHub</a></p>
+  </div>
+</footer>
+<script src="../assets/js/filter.js" defer></script>
+</body>
+</html>

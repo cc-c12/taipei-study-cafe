@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>這個網站怎麼做的｜台北讀書咖啡誌</title>
+<meta name="description" content="從你所在的捷運站，找一間坐得住、讀得下書的咖啡廳。每一間都是作者親自去過的。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&amp;family=Noto+Sans+TC:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10h12v3.5a6 6 0 0 1-6 6h0a6 6 0 0 1-6-6V10zM16.5 11.5h1a2.5 2.5 0 0 1 0 5h-1.3M3 21h16"/><path d="M8.5 7c0-1.2 1-1.5 1-2.7M12 7c0-1.2 1-1.5 1-2.7"/></svg><span>台北讀書咖啡誌</span></a>
+    <nav class="nav" aria-label="主要導覽"><a href="../">首頁</a><a href="../stations/">捷運站</a><a href="../guides/">主題清單</a><a href="../rating/">評分方法</a><a href="../how-it-works/" aria-current="page">這個網站怎麼做的</a><a href="../about/">關於本站</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<nav class="crumbs" aria-label="麵包屑"><a href="../">首頁</a> › 這個網站怎麼做的</nav>
+<h1 class="page-title">這個網站怎麼做的</h1>
+<article class="prose">
+<h2>一句話</h2>
+<p>我沒有自己寫網頁，而是寫了一本給 AI 看的工作手冊 <a href="https://github.com/cc-c12/taipei-study-cafe/blob/main/AGENTS.md"><code>AGENTS.md</code></a>。之後每去一間新的咖啡廳，只要把筆記交給 AI、說一聲「收錄」，它就會照手冊把新頁面做好。</p>
+<h2>手冊是怎麼來的</h2>
+<p>手冊不是我從零寫的。我先讓 AI 一題一題訪談我：網站給誰看、我在意哪些條件、什麼事絕對不能做。問完後由 AI 起草，我再修改。完整的訪談紀錄在 <a href="https://github.com/cc-c12/taipei-study-cafe/blob/main/process/01-interview.md"><code>process/01-interview.md</code></a>。</p>
+<h2>三層架構</h2>
+<p>這個網站採用 LLM Wiki 的做法，分成三層：</p>
+<ul><li><strong>原始資料 raw/</strong>：我的造訪筆記。AI 只能讀，不能改。</li><li><strong>知識頁 content/</strong>：AI 照手冊把筆記整理成咖啡廳頁、捷運站頁和主題清單。</li><li><strong>網站 docs/</strong>：由建置程式自動產生，沒有人手動改。</li></ul>
+<h2>規則不只寫在紙上</h2>
+<p>手冊裡大部分的規則，都由建置程式 <a href="https://github.com/cc-c12/taipei-study-cafe/blob/main/scripts/build.py"><code>scripts/build.py</code></a> 自動檢查：</p>
+<ul><li>必填欄位沒填、選項寫錯、連到不存在的頁面：建置失敗。</li><li>咖啡廳找不到對應的造訪筆記：建置失敗，所以每一頁都追溯得到出處。</li><li>有人手寫星數：建置失敗。星數只能由公式算出來，見 <a href="../rating/">評分方法</a>。</li><li>用了「必去」「神店」這類誇大字眼：發出警告。</li></ul>
+<h2>四種指令</h2>
+<p>前三種來自 LLM Wiki，第四種是我自己加的：</p>
+<ul><li><strong>收錄</strong>：「收錄某一篇造訪筆記」。AI 先提出計畫，我同意後才建立頁面、更新捷運站頁，最後跑建置檢查。</li><li><strong>提問</strong>：「週日晚上在東門哪裡能讀書？」AI 只根據網站內容回答；好的答案可以存成新的主題清單。</li><li><strong>健檢</strong>：AI 跑一次檢查，找出過時資訊、待確認欄位、還沒收錄的筆記，只回報、不擅自修改。</li><li><strong>查證</strong>：「幫我查缺的資料」。AI 上網找地址、營業時間、低消這類事實，先列出附來源和日期的核對表，我確認後才寫進網站。</li></ul>
+<h2>手冊越改越好</h2>
+<p>每次 AI 遇到規則沒寫清楚的地方，我就把它補進手冊，並在 <a href="https://github.com/cc-c12/taipei-study-cafe/blob/main/log.md"><code>log.md</code></a> 記下改了什麼、為什麼。例如：</p>
+<ul><li>我只記得是「1 月去的」，原規則卻要求寫到哪一天。現在可以只寫到月份，因為不能為了填格子而編造日期。</li><li>我說「應該不限時」「有插座」。現在有一條保守原則：印象一律填「未確認」，程度不明就取較低的選項。</li><li>造訪筆記建好之後，我才想起某間店不限時。現在補充資訊另外放在 <code>raw/updates/</code>，不會改到原始筆記，也不會被誤認為又去了一次。</li><li>請 AI 上網查證時發現：如果「最後確認」填查詢當天，拿一篇 2020 年的文章也能讓「資訊可能過時」消失。現在規定填的是資料本身的日期。</li></ul>
+
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>台北讀書咖啡誌｜所有資訊來自作者的親身造訪，出發前請以店家公告為準。</p>
+    <p>本網站由 AI 依照 <code>AGENTS.md</code> v1 的規則維護｜最後建置 2026-11-13｜<a href="https://github.com/cc-c12/taipei-study-cafe">GitHub</a></p>
+  </div>
+</footer>
+<script src="../assets/js/filter.js" defer></script>
+</body>
+</html>

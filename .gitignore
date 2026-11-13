@@ -1,0 +1,8 @@
+# 原始照片可能很大、也可能帶 GPS 位置，只上傳處理過的 assets/photos/
+raw/photos/
+
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+desktop.ini

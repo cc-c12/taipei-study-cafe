@@ -1,0 +1,4 @@
+# 所有文字檔一律用 LF 換行，跟 build.py 寫出的檔案一致，避免 Windows 上每次建置都出現假的變更
+* text=auto eol=lf
+*.png binary
+*.jpg binary

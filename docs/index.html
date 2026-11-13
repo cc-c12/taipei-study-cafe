@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>台北讀書咖啡誌</title>
+<meta name="description" content="從你所在的捷運站，找一間坐得住、讀得下書的咖啡廳。每一間都是作者親自去過的。">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&amp;family=Noto+Sans+TC:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10h12v3.5a6 6 0 0 1-6 6h0a6 6 0 0 1-6-6V10zM16.5 11.5h1a2.5 2.5 0 0 1 0 5h-1.3M3 21h16"/><path d="M8.5 7c0-1.2 1-1.5 1-2.7M12 7c0-1.2 1-1.5 1-2.7"/></svg><span>台北讀書咖啡誌</span></a>
+    <nav class="nav" aria-label="主要導覽"><a href="./" aria-current="page">首頁</a><a href="./stations/">捷運站</a><a href="./guides/">主題清單</a><a href="./rating/">評分方法</a><a href="./how-it-works/">這個網站怎麼做的</a><a href="./about/">關於本站</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<section class="hero">
+  <div class="ring" aria-hidden="true"></div>
+  <h1>台北讀書咖啡誌</h1>
+  <p>從你所在的捷運站，找一間坐得住、讀得下書的咖啡廳。每一間都是作者親自去過的。</p>
+  <div class="station-row"><span class="row-label">依捷運站找</span><a class="station-badge" href="stations/daan/"><span class="line-dots"><i class="line-dot" style="--line-color:#C48C31" title="文湖線"></i><i class="line-dot" style="--line-color:#E3002C" title="淡水信義線"></i></span>大安站</a><a class="station-badge" href="stations/dongmen/"><span class="line-dots"><i class="line-dot" style="--line-color:#E3002C" title="淡水信義線"></i><i class="line-dot" style="--line-color:#F8B61C" title="中和新蘆線"></i></span>東門站</a><a class="station-badge" href="stations/technology-building/"><span class="line-dots"><i class="line-dot" style="--line-color:#C48C31" title="文湖線"></i></span>科技大樓站</a><a class="station-badge" href="stations/xinyi-anhe/"><span class="line-dots"><i class="line-dot" style="--line-color:#E3002C" title="淡水信義線"></i></span>信義安和站</a><a class="station-badge" href="stations/zhongxiao-fuxing/"><span class="line-dots"><i class="line-dot" style="--line-color:#C48C31" title="文湖線"></i><i class="line-dot" style="--line-color:#0070BD" title="板南線"></i></span>忠孝復興站</a></div>
+</section>
+
+<form class="filters" data-filter>
+  <fieldset>
+    <legend>我想要……</legend>
+    <label class="check"><input type="checkbox" name="outlets" value="1">有插座</label>
+    <label class="check"><input type="checkbox" name="wifi" value="1">Wi-Fi 穩定</label>
+    <label class="check"><input type="checkbox" name="quiet" value="1">安靜</label>
+    <label class="check"><input type="checkbox" name="late" value="1">營業到 21:00 以後</label>
+    <label class="check"><input type="checkbox" name="nolimit" value="1">不限時</label>
+    <select name="station" aria-label="捷運站"><option value="">所有捷運站</option><option value="daan">大安站</option><option value="dongmen">東門站</option><option value="technology-building">科技大樓站</option><option value="xinyi-anhe">信義安和站</option><option value="zhongxiao-fuxing">忠孝復興站</option></select>
+    <select name="tag" aria-label="情境標籤"><option value="">所有情境</option><option value="約會聊天">約會聊天</option><option value="甜點">甜點</option><option value="精品咖啡">精品咖啡</option><option value="有正餐">有正餐</option><option value="適合討論">適合討論</option><option value="戶外座位">戶外座位</option></select>
+  </fieldset>
+  <div class="filter-foot"><span>符合 <b data-count>5</b> 間・依讀書友善度排序</span><button type="reset">清除條件</button></div>
+</form>
+
+<div class="grid">
+<article class="card" data-cafe data-station="dongmen" data-outlets="多" data-wifi="穩定" data-quiet="安靜" data-late="1" data-nolimit="1" data-tags="甜點" data-stars="5">
+  <a href="cafes/yiri-cafe/">
+    <div class="photo placeholder" aria-hidden="true"><span>翌</span><small>還沒有照片</small></div>
+    <div class="card-body">
+      <h3>翌日咖啡店</h3>
+      <div class="card-meta"><span class="station-badge"><span class="line-dots"><i class="line-dot" style="--line-color:#E3002C" title="淡水信義線"></i><i class="line-dot" style="--line-color:#F8B61C" title="中和新蘆線"></i></span>東門站</span><span>步行 10 分鐘</span></div>
+      <span class="stars" role="img" aria-label="讀書友善度 5 顆星（滿分 5 顆）"><span class="on">★★★★★</span><span class="off"></span></span>
+      <p class="summary">日式昭和風、四人卡座，營業到凌晨一點</p>
+      <ul class="chips"><li class="chip">甜點</li></ul>
+    </div>
+  </a>
+</article>
+<article class="card" data-cafe data-station="xinyi-anhe" data-outlets="多" data-wifi="穩定" data-quiet="安靜" data-late="0" data-nolimit="1" data-tags="約會聊天" data-stars="4">
+  <a href="cafes/congrats-cafe/">
+    <div class="photo placeholder" aria-hidden="true"><span>C</span><small>還沒有照片</small></div>
+    <div class="card-body">
+      <h3>Congrats Café</h3>
+      <div class="card-meta"><span class="station-badge"><span class="line-dots"><i class="line-dot" style="--line-color:#E3002C" title="淡水信義線"></i></span>信義安和站</span><span>步行 3 分鐘</span></div>
+      <span class="stars" role="img" aria-label="讀書友善度 4 顆星（滿分 5 顆）"><span class="on">★★★★</span><span class="off">★</span></span>
+      <p class="summary">主要座位在二樓、插座多，能做事也能小聲聊天</p>
+      <ul class="chips"><li class="chip">約會聊天</li></ul>
+    </div>
+  </a>
+</article>
+<article class="card" data-cafe data-station="technology-building" data-outlets="部分" data-wifi="穩定" data-quiet="安靜" data-late="1" data-nolimit="1" data-tags="有正餐" data-stars="4">
+  <a href="cafes/weiyang-cafe/">
+    <div class="photo placeholder" aria-hidden="true"><span>未</span><small>還沒有照片</small></div>
+    <div class="card-body">
+      <h3>未央咖啡店</h3>
+      <div class="card-meta"><span class="station-badge"><span class="line-dots"><i class="line-dot" style="--line-color:#C48C31" title="文湖線"></i></span>科技大樓站</span><span>步行 7 分鐘</span></div>
+      <span class="stars" role="img" aria-label="讀書友善度 4 顆星（滿分 5 顆）"><span class="on">★★★★</span><span class="off">★</span></span>
+      <p class="summary">台北有名的深夜咖啡店，安靜好做事但常客滿</p>
+      <ul class="chips"><li class="chip">有正餐</li></ul>
+    </div>
+  </a>
+</article>
+<article class="card" data-cafe data-station="daan" data-outlets="部分" data-wifi="穩定" data-quiet="安靜" data-late="1" data-nolimit="1" data-tags="甜點" data-stars="4">
+  <a href="cafes/zhejian-cafe/">
+    <div class="photo placeholder" aria-hidden="true"><span>這</span><small>還沒有照片</small></div>
+    <div class="card-body">
+      <h3>這間咖啡</h3>
+      <div class="card-meta"><span class="station-badge"><span class="line-dots"><i class="line-dot" style="--line-color:#C48C31" title="文湖線"></i><i class="line-dot" style="--line-color:#E3002C" title="淡水信義線"></i></span>大安站</span><span>步行 3 分鐘</span></div>
+      <span class="stars" role="img" aria-label="讀書友善度 4 顆星（滿分 5 顆）"><span class="on">★★★★</span><span class="off">★</span></span>
+      <p class="summary">我以前常去做事的店，安靜、蛋糕好吃</p>
+      <ul class="chips"><li class="chip">甜點</li></ul>
+    </div>
+  </a>
+</article>
+<article class="card" data-cafe data-station="zhongxiao-fuxing" data-outlets="部分" data-wifi="穩定" data-quiet="普通" data-late="1" data-nolimit="1" data-tags="有正餐,約會聊天" data-stars="3">
+  <a href="cafes/homeys-cafe/">
+    <div class="photo placeholder" aria-hidden="true"><span>H</span><small>還沒有照片</small></div>
+    <div class="card-body">
+      <h3>Homey&#x27;s Cafe</h3>
+      <div class="card-meta"><span class="station-badge"><span class="line-dots"><i class="line-dot" style="--line-color:#C48C31" title="文湖線"></i><i class="line-dot" style="--line-color:#0070BD" title="板南線"></i></span>忠孝復興站</span><span>步行 5 分鐘</span></div>
+      <span class="stars" role="img" aria-label="讀書友善度 3 顆星（滿分 5 顆）"><span class="on">★★★</span><span class="off">★★</span></span>
+      <p class="summary">藏在民宅二樓，有正餐，一半聊天一半做事</p>
+      <ul class="chips"><li class="chip">有正餐</li><li class="chip">約會聊天</li></ul>
+    </div>
+  </a>
+</article>
+</div>
+<p class="empty" data-empty hidden>沒有符合條件的店，試著拿掉一兩個條件。</p>
+
+<section>
+  <h2 class="section-title">主題清單</h2>
+  <p class="section-sub">把常被問的問題，整理成可以直接用的清單。</p>
+  <div class="tiles"><a class="tile" href="guides/dessert-break/"><h3>讀累了吃甜點</h3><p>甜點好吃、也能坐下來讀書的店・2 間</p></a><a class="tile" href="guides/late-night-study/"><h3>深夜也能讀書</h3><p>平日營業到晚上 10 點以後的咖啡廳・4 間</p></a><a class="tile" href="guides/meal-and-work/"><h3>吃正餐順便做事</h3><p>有正餐可以吃、吃完能繼續坐著做事的店・2 間</p></a></div>
+</section>
+
+<section class="notice">
+  <p>這個網站的每一頁，都是 AI 照著同一本工作手冊做出來的：星數由公式計算、資訊查不到就標「未確認」、每一頁都追溯得到我的造訪筆記。<a href="how-it-works/">看看這個網站怎麼做的 →</a></p>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>台北讀書咖啡誌｜所有資訊來自作者的親身造訪，出發前請以店家公告為準。</p>
+    <p>本網站由 AI 依照 <code>AGENTS.md</code> v1 的規則維護｜最後建置 2026-11-13｜<a href="https://github.com/cc-c12/taipei-study-cafe">GitHub</a></p>
+  </div>
+</footer>
+<script src="./assets/js/filter.js" defer></script>
+</body>
+</html>
