@@ -79,3 +79,18 @@
 - 主要變化：翌日的插座依 TVBS（2026-04）改成「多」，★★★ → ★★★★★；Congrats 新增「週末客滿限時 2.5 小時」的提醒；未央的限時依 NOWnews（2020）改成「不限時」，並在頁面註明資料較舊。
 - 為什麼：我請 AI 查證缺失的資料，看過核對表後確認「都是對的」，並補充三間店的步行時間。
 - 影響的檔案：`content/cafes/*.md`、`raw/updates/2026-11-10-*--2.md`、`raw/updates/2026-11-10-weiyang-cafe.md`
+
+## 2026-11-14｜收錄｜上樓看看（Arthere cafe）
+
+- 做了什麼：把對話中的造訪經驗轉錄成 `raw/notes/2025-08-arthere-cafe.md`，建立咖啡廳頁和新的市政府站頁。讀書友善度 ★★★★★（插座多 2＋Wi-Fi 穩定 1＋安靜 2＋營業到 22:30 得 1＝6 分），標上「有正餐」標籤。
+- 為什麼：我口述了 2025 年 8 月去上樓看看的經驗。slug 用店家英文名 `arthere-cafe`；「蠻多插座」經我確認是「多」；Wi-Fi 穩定是在同一段對話中補充的，所以直接寫進轉錄筆記，沒有另開補充檔。
+- 待確認：`address`、`min_charge`；營業時間只知道打烊 22:30。`verified` 是 2025-08，已超過 90 天，頁面會顯示「資訊可能過時」。
+- 影響的檔案：`raw/notes/2025-08-arthere-cafe.md`、`content/cafes/arthere-cafe.md`、`content/stations/taipei-city-hall.md`、`docs/`
+
+## 2026-11-14｜修改｜依查證結果更新上樓看看，加上第一張照片
+
+- 做了什麼：(1) 補上地址、完整營業時間（每天 11:30–22:30）、低消（一杯飲品或一份主餐）和 4 號出口，`verified` 改成 2026-11-14（Google 地圖商家資訊的查詢日），「資訊可能過時」的提示因此消失；星數不變，維持 ★★★★★。查證網址記在 `raw/updates/2026-11-14-arthere-cafe.md`。(2) 加上我自己拍的照片 `omelet.jpg`。
+- 為什麼：我請 AI 查證，並交代「跟我寫的一樣就不要改」，所以插座、Wi-Fi、不限時、打烊時間都維持原樣；步行時間文章寫 5 分鐘，以我的 4 分鐘為準。低消和出口只有蕃薯藤 2025-05-21 一個來源，資料超過一年，在「讀書小提醒」註明。
+- 照片：原圖左上角有一位客人的側臉，經我同意後裁成 4:3（只留桌面和餐點），剛好符合卡片照片框的比例。`process-photos.ps1` 不支援裁切，所以這張改用一次性的指令處理，設定跟腳本相同（移除 EXIF、最長邊 1200、品質 82）。注意：之後如果對 `arthere-cafe` 再執行 `process-photos.ps1`，會用沒裁切的原圖覆蓋這張照片。
+- 影響的檔案：`content/cafes/arthere-cafe.md`、`raw/updates/2026-11-14-arthere-cafe.md`、`raw/photos/arthere-cafe/omelet.jpg`（不上傳）、`assets/photos/arthere-cafe/omelet.jpg`、`docs/`
+
