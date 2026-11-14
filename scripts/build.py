@@ -13,9 +13,11 @@ from __future__ import annotations
 import datetime as dt
 import html
 import json
+import os
 import re
 import shutil
 import sys
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -870,8 +872,19 @@ def page_static(site: dict, slug: str, pg: dict) -> str:
 # ════════════════════════ 主流程 ════════════════════════
 
 def write(path: Path, text: str) -> None:
+    """寫檔。OneDrive／Dropbox 同步中可能短暫鎖住檔案，所以失敗時稍等重試，最後改用暫存檔替換。"""
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(text, encoding="utf-8", newline="\n")
+    if path.exists() and path.read_text(encoding="utf-8", errors="replace") == text:
+        return  # 內容沒變就不寫，也避免觸發不必要的同步
+    for attempt in range(5):
+        try:
+            path.write_text(text, encoding="utf-8", newline="\n")
+            return
+        except OSError:
+            time.sleep(0.4 * (attempt + 1))
+    tmp = path.with_name(path.name + ".tmp")
+    tmp.write_text(text, encoding="utf-8", newline="\n")
+    os.replace(tmp, path)
 
 
 def main() -> int:

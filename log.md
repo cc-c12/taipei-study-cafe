@@ -94,3 +94,13 @@
 - 照片：原圖左上角有一位客人的側臉，經我同意後裁成 4:3（只留桌面和餐點），剛好符合卡片照片框的比例。`process-photos.ps1` 不支援裁切，所以這張改用一次性的指令處理，設定跟腳本相同（移除 EXIF、最長邊 1200、品質 82）。注意：之後如果對 `arthere-cafe` 再執行 `process-photos.ps1`，會用沒裁切的原圖覆蓋這張照片。
 - 影響的檔案：`content/cafes/arthere-cafe.md`、`raw/updates/2026-11-14-arthere-cafe.md`、`raw/photos/arthere-cafe/omelet.jpg`（不上傳）、`assets/photos/arthere-cafe/omelet.jpg`、`docs/`
 
+## 2026-11-14｜手冊｜AGENTS.md v2：依新對話實測補上 5 條規則
+
+- 做了什麼：
+  1. 新增第 11 節「上傳到 GitHub」；速覽第 6 條、第 9 節驗收清單都加上「問使用者要不要上傳」；紅線新增「沒經同意就上傳」和「force push」。
+  2. 7-1 新增「照片」步驟：使用者給的照片原封不動放進 `raw/photos/<slug>/`，有人臉先問，裁切參數記進 `raw/updates/`。
+  3. `process-photos.ps1` 新增 `-Photo`、`-Crop` 參數，而且預設不覆蓋已存在的照片；紅線新增「不准用 `-Force` 覆蓋裁切過的照片」。
+  4. 明文規定筆記建立前、同一段對話裡的補充直接寫進筆記。
+  5. 第 10 節新增：大改版前先把舊版存成 `process/agents-v<N>.md`。這次 v1 全文已存成 `process/agents-v1.md`。
+- 為什麼：我開了一個全新的對話，只說「幫我收錄一家新的咖啡廳」，沒提任何規則。AI 照 v1 完成了收錄、查證和照片處理，10 項檢查全部通過，但也暴露出 5 個 v1 沒寫到的地方：做完不知道要上傳，所以網站上看不到新店；照片能不能放進 `raw/`、怎麼裁切都沒寫；重新處理照片會把裁掉的人臉蓋回來；同一段對話裡的補充要寫在哪也沒寫。完整紀錄見 `process/03-fresh-session-test.md`。
+- 影響的檔案：`AGENTS.md`、`scripts/process-photos.ps1`、`process/agents-v1.md`、`process/03-fresh-session-test.md`、`content/pages/how-it-works.md`

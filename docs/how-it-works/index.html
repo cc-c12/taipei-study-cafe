@@ -36,9 +36,13 @@
 <h2>四種指令</h2>
 <p>前三種來自 LLM Wiki，第四種是我自己加的：</p>
 <ul><li><strong>收錄</strong>：「收錄某一篇造訪筆記」。AI 先提出計畫，我同意後才建立頁面、更新捷運站頁，最後跑建置檢查。</li><li><strong>提問</strong>：「週日晚上在東門哪裡能讀書？」AI 只根據網站內容回答；好的答案可以存成新的主題清單。</li><li><strong>健檢</strong>：AI 跑一次檢查，找出過時資訊、待確認欄位、還沒收錄的筆記，只回報、不擅自修改。</li><li><strong>查證</strong>：「幫我查缺的資料」。AI 上網找地址、營業時間、低消這類事實，先列出附來源和日期的核對表，我確認後才寫進網站。</li></ul>
+<h2>實測：新對話只靠手冊</h2>
+<p>手冊好不好，要讓一個什麼都不知道的 AI 來試。我開了一個全新的對話，只用平常的口吻說「幫我收錄一家新的咖啡廳」，沒有提任何規則。</p>
+<p>結果 AI 自己先提出計畫、追問模糊的資訊（「只記得月份也可以，我不會自己補日子」），發現照片裡有路人的臉也先停下來問我。10 項檢查全部通過，新店 <a href="../cafes/arthere-cafe/">上樓看看</a> 就是這樣收錄進來的。</p>
+<p>它也幫我找到手冊沒寫到的 5 件事，例如做完不知道要上傳 GitHub、照片腳本不能裁切。我把這些補進手冊，成為 <strong>v2</strong>。完整的測試紀錄在 <a href="https://github.com/cc-c12/taipei-study-cafe/blob/main/process/03-fresh-session-test.md"><code>process/03-fresh-session-test.md</code></a>，第一版手冊保留在 <a href="https://github.com/cc-c12/taipei-study-cafe/blob/main/process/agents-v1.md"><code>process/agents-v1.md</code></a>。</p>
 <h2>手冊越改越好</h2>
 <p>每次 AI 遇到規則沒寫清楚的地方，我就把它補進手冊，並在 <a href="https://github.com/cc-c12/taipei-study-cafe/blob/main/log.md"><code>log.md</code></a> 記下改了什麼、為什麼。例如：</p>
-<ul><li>我只記得是「1 月去的」，原規則卻要求寫到哪一天。現在可以只寫到月份，因為不能為了填格子而編造日期。</li><li>我說「應該不限時」「有插座」。現在有一條保守原則：印象一律填「未確認」，程度不明就取較低的選項。</li><li>造訪筆記建好之後，我才想起某間店不限時。現在補充資訊另外放在 <code>raw/updates/</code>，不會改到原始筆記，也不會被誤認為又去了一次。</li><li>請 AI 上網查證時發現：如果「最後確認」填查詢當天，拿一篇 2020 年的文章也能讓「資訊可能過時」消失。現在規定填的是資料本身的日期。</li></ul>
+<ul><li>我只記得是「1 月去的」，原規則卻要求寫到哪一天。現在可以只寫到月份，因為不能為了填格子而編造日期。</li><li>我說「應該不限時」「有插座」。現在有一條保守原則：印象一律填「未確認」，程度不明就取較低的選項。</li><li>造訪筆記建好之後，我才想起某間店不限時。現在補充資訊另外放在 <code>raw/updates/</code>，不會改到原始筆記，也不會被誤認為又去了一次。</li><li>請 AI 上網查證時發現：如果「最後確認」填查詢當天，拿一篇 2020 年的文章也能讓「資訊可能過時」消失。現在規定填的是資料本身的日期。</li><li>新對話實測時，AI 收錄完就停了，網站上看不到新店，因為手冊沒寫要上傳。v2 規定收工前一定要問我要不要上傳 GitHub。</li></ul>
 
 </article>
 
@@ -46,7 +50,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <p>台北讀書咖啡誌｜所有資訊來自作者的親身造訪，出發前請以店家公告為準。</p>
-    <p>本網站由 AI 依照 <code>AGENTS.md</code> v1 的規則維護｜最後建置 2026-11-13｜<a href="https://github.com/cc-c12/taipei-study-cafe">GitHub</a></p>
+    <p>本網站由 AI 依照 <code>AGENTS.md</code> v2 的規則維護｜最後建置 2026-11-14｜<a href="https://github.com/cc-c12/taipei-study-cafe">GitHub</a></p>
   </div>
 </footer>
 <script src="../assets/js/filter.js" defer></script>

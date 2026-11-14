@@ -5,6 +5,11 @@
 - **網站**：<https://cc-c12.github.io/taipei-study-cafe/>
 - **給 AI 的工作手冊**：[`AGENTS.md`](AGENTS.md)（`CLAUDE.md` 只有一行 `@AGENTS.md`，兩種工具讀的是同一份）
 - **手冊的變更紀錄**：[`log.md`](log.md)
+- **作業歷程**：
+  - [`process/01-interview.md`](process/01-interview.md)：手冊是怎麼由 AI 訪談我、一起討論出來的
+  - [`process/02-rule-test.md`](process/02-rule-test.md)：故意違規，證明規則會被程式強制執行
+  - [`process/03-fresh-session-test.md`](process/03-fresh-session-test.md)：開新對話，只靠手冊讓 AI 收錄一間新店（10/10 通過），並據此改出 v2
+  - [`process/agents-v1.md`](process/agents-v1.md)：第一版手冊的原文，可以跟現行的 v2 對照
 
 ## 這個專案的重點
 

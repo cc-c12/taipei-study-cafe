@@ -24,7 +24,7 @@
   <div class="ring" aria-hidden="true"></div>
   <h1>台北讀書咖啡誌</h1>
   <p>從你所在的捷運站，找一間坐得住、讀得下書的咖啡廳。每一間都是作者親自去過的。</p>
-  <div class="station-row"><span class="row-label">依捷運站找</span><a class="station-badge" href="stations/daan/"><span class="line-dots"><i class="line-dot" style="--line-color:#C48C31" title="文湖線"></i><i class="line-dot" style="--line-color:#E3002C" title="淡水信義線"></i></span>大安站</a><a class="station-badge" href="stations/dongmen/"><span class="line-dots"><i class="line-dot" style="--line-color:#E3002C" title="淡水信義線"></i><i class="line-dot" style="--line-color:#F8B61C" title="中和新蘆線"></i></span>東門站</a><a class="station-badge" href="stations/technology-building/"><span class="line-dots"><i class="line-dot" style="--line-color:#C48C31" title="文湖線"></i></span>科技大樓站</a><a class="station-badge" href="stations/xinyi-anhe/"><span class="line-dots"><i class="line-dot" style="--line-color:#E3002C" title="淡水信義線"></i></span>信義安和站</a><a class="station-badge" href="stations/zhongxiao-fuxing/"><span class="line-dots"><i class="line-dot" style="--line-color:#C48C31" title="文湖線"></i><i class="line-dot" style="--line-color:#0070BD" title="板南線"></i></span>忠孝復興站</a></div>
+  <div class="station-row"><span class="row-label">依捷運站找</span><a class="station-badge" href="stations/daan/"><span class="line-dots"><i class="line-dot" style="--line-color:#C48C31" title="文湖線"></i><i class="line-dot" style="--line-color:#E3002C" title="淡水信義線"></i></span>大安站</a><a class="station-badge" href="stations/dongmen/"><span class="line-dots"><i class="line-dot" style="--line-color:#E3002C" title="淡水信義線"></i><i class="line-dot" style="--line-color:#F8B61C" title="中和新蘆線"></i></span>東門站</a><a class="station-badge" href="stations/taipei-city-hall/"><span class="line-dots"><i class="line-dot" style="--line-color:#0070BD" title="板南線"></i></span>市政府站</a><a class="station-badge" href="stations/technology-building/"><span class="line-dots"><i class="line-dot" style="--line-color:#C48C31" title="文湖線"></i></span>科技大樓站</a><a class="station-badge" href="stations/xinyi-anhe/"><span class="line-dots"><i class="line-dot" style="--line-color:#E3002C" title="淡水信義線"></i></span>信義安和站</a><a class="station-badge" href="stations/zhongxiao-fuxing/"><span class="line-dots"><i class="line-dot" style="--line-color:#C48C31" title="文湖線"></i><i class="line-dot" style="--line-color:#0070BD" title="板南線"></i></span>忠孝復興站</a></div>
 </section>
 
 <form class="filters" data-filter>
@@ -35,13 +35,25 @@
     <label class="check"><input type="checkbox" name="quiet" value="1">安靜</label>
     <label class="check"><input type="checkbox" name="late" value="1">營業到 21:00 以後</label>
     <label class="check"><input type="checkbox" name="nolimit" value="1">不限時</label>
-    <select name="station" aria-label="捷運站"><option value="">所有捷運站</option><option value="daan">大安站</option><option value="dongmen">東門站</option><option value="technology-building">科技大樓站</option><option value="xinyi-anhe">信義安和站</option><option value="zhongxiao-fuxing">忠孝復興站</option></select>
+    <select name="station" aria-label="捷運站"><option value="">所有捷運站</option><option value="daan">大安站</option><option value="dongmen">東門站</option><option value="taipei-city-hall">市政府站</option><option value="technology-building">科技大樓站</option><option value="xinyi-anhe">信義安和站</option><option value="zhongxiao-fuxing">忠孝復興站</option></select>
     <select name="tag" aria-label="情境標籤"><option value="">所有情境</option><option value="約會聊天">約會聊天</option><option value="甜點">甜點</option><option value="精品咖啡">精品咖啡</option><option value="有正餐">有正餐</option><option value="適合討論">適合討論</option><option value="戶外座位">戶外座位</option></select>
   </fieldset>
-  <div class="filter-foot"><span>符合 <b data-count>5</b> 間・依讀書友善度排序</span><button type="reset">清除條件</button></div>
+  <div class="filter-foot"><span>符合 <b data-count>6</b> 間・依讀書友善度排序</span><button type="reset">清除條件</button></div>
 </form>
 
 <div class="grid">
+<article class="card" data-cafe data-station="taipei-city-hall" data-outlets="多" data-wifi="穩定" data-quiet="安靜" data-late="1" data-nolimit="1" data-tags="有正餐" data-stars="5">
+  <a href="cafes/arthere-cafe/">
+    <div class="photo"><img src="assets/photos/arthere-cafe/omelet.jpg" alt="上樓看看的照片" loading="lazy"></div>
+    <div class="card-body">
+      <h3>上樓看看</h3>
+      <div class="card-meta"><span class="station-badge"><span class="line-dots"><i class="line-dot" style="--line-color:#0070BD" title="板南線"></i></span>市政府站</span><span>步行 4 分鐘</span></div>
+      <span class="stars" role="img" aria-label="讀書友善度 5 顆星（滿分 5 顆）"><span class="on">★★★★★</span><span class="off"></span></span>
+      <p class="summary">信義區兩層樓，插座蠻多又安靜，美式可續杯</p>
+      <ul class="chips"><li class="chip">有正餐</li></ul>
+    </div>
+  </a>
+</article>
 <article class="card" data-cafe data-station="dongmen" data-outlets="多" data-wifi="穩定" data-quiet="安靜" data-late="1" data-nolimit="1" data-tags="甜點" data-stars="5">
   <a href="cafes/yiri-cafe/">
     <div class="photo placeholder" aria-hidden="true"><span>翌</span><small>還沒有照片</small></div>
@@ -108,7 +120,7 @@
 <section>
   <h2 class="section-title">主題清單</h2>
   <p class="section-sub">把常被問的問題，整理成可以直接用的清單。</p>
-  <div class="tiles"><a class="tile" href="guides/dessert-break/"><h3>讀累了吃甜點</h3><p>甜點好吃、也能坐下來讀書的店・2 間</p></a><a class="tile" href="guides/late-night-study/"><h3>深夜也能讀書</h3><p>平日營業到晚上 10 點以後的咖啡廳・4 間</p></a><a class="tile" href="guides/meal-and-work/"><h3>吃正餐順便做事</h3><p>有正餐可以吃、吃完能繼續坐著做事的店・2 間</p></a></div>
+  <div class="tiles"><a class="tile" href="guides/dessert-break/"><h3>讀累了吃甜點</h3><p>甜點好吃、也能坐下來讀書的店・2 間</p></a><a class="tile" href="guides/late-night-study/"><h3>深夜也能讀書</h3><p>平日營業到晚上 10 點以後的咖啡廳・5 間</p></a><a class="tile" href="guides/meal-and-work/"><h3>吃正餐順便做事</h3><p>有正餐可以吃、吃完能繼續坐著做事的店・3 間</p></a></div>
 </section>
 
 <section class="notice">
@@ -119,7 +131,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <p>台北讀書咖啡誌｜所有資訊來自作者的親身造訪，出發前請以店家公告為準。</p>
-    <p>本網站由 AI 依照 <code>AGENTS.md</code> v1 的規則維護｜最後建置 2026-11-13｜<a href="https://github.com/cc-c12/taipei-study-cafe">GitHub</a></p>
+    <p>本網站由 AI 依照 <code>AGENTS.md</code> v2 的規則維護｜最後建置 2026-11-14｜<a href="https://github.com/cc-c12/taipei-study-cafe">GitHub</a></p>
   </div>
 </footer>
 <script src="./assets/js/filter.js" defer></script>
